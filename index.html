@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <title>jQuery Template</title>
     <script
-  src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  src="https://code.jquery.com/jquery-3.3.1.js">
+    
+    </script>
  
  
 
 
 
 <script>
+        $(document).ready(function(){
+    $("form").submit(function(){
+         $('#box').css({position:"absolute",width:300,height:200,left:200,top:300,backgroundColor:'grey'});
         
-        $(function(){
-$('input[name=font]:checked', '#action').val()
-        });
-        
+    });
+});
+       
     </script>
     
 
   </head>
   <body>
-  <h1>Welcome to my College Info Generator</h1>
+  <h1>Welcome to my Student Info for Interested Colleges Generator</h1>
   <form action="">
-  Name: <input type="text" name="user"><br>
+  Full Name: <input type="text" name="user"><br>
   Email: <input type="text" name= "email"><br>
-  Favorite Color : <input type= "text" name= m
-  Male:<input type="radio" name="sex" value="m"><br>
-  Female<input type="radio" name="sex" value="f"><br>
+  Favorite Color : <input type= "text" name= "FavColor"><br>
+  Number: <input type= "text" name = "number"><br>
   <input type="submit">
+  <div id="box"></div>
+ 
 </form>
   </body>
 </html>
